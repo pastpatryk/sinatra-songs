@@ -12,8 +12,26 @@ module Sinatra
         end
       end
 
+      public :registered
+
       def get(route, &action)
-        @endpoints << {type: :get, route: route, action: action}
+  			add_endpoint(:get, route, &action)
+  		end
+
+  		def post(route, &action)
+  			add_endpoint(:post, route, &action)
+  		end
+
+  		def put(route, &action)
+  			add_endpoint(:put, route, &action)
+  		end
+
+  		def delete(route, &action)
+  			add_endpoint(:delete, route, &action)
+  		end
+
+      def add_endpoint(type, route, &action)
+  			@endpoints << {type: type, route: route, action: action}
   		end
 
     end
