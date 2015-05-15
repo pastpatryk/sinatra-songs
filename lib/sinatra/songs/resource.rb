@@ -1,5 +1,5 @@
 module Sinatra
-  module Restful
+  module Songs
     module Resource
 
       def self.extended

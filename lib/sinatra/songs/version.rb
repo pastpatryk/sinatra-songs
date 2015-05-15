@@ -1,5 +1,5 @@
 module Sinatra
-  module Restful
+  module Songs
     VERSION = '0.1.3'
   end
 end
