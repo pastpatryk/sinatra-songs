@@ -14,20 +14,10 @@ module Sinatra
 
       public :registered
 
-      def get(route, &action)
-  			add_endpoint(:get, route, &action)
-  		end
-
-  		def post(route, &action)
-  			add_endpoint(:post, route, &action)
-  		end
-
-  		def put(route, &action)
-  			add_endpoint(:put, route, &action)
-  		end
-
-  		def delete(route, &action)
-  			add_endpoint(:delete, route, &action)
+      [:get, :post, :put, :delete].each do |type|
+  			define_method(type) do |route, &action|
+  				add_endpoint(type, route, &action)
+  			end
   		end
 
       def add_endpoint(type, route, &action)
