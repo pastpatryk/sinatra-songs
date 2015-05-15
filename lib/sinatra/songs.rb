@@ -2,6 +2,7 @@ require 'sinatra/songs/version'
 
 module Sinatra
   module Songs
+    DEFAULT_TYPES = [:get, :post, :put, :delete]
 
     def self.extended(base)
       base.instance_variable_set :@endpoints, []
@@ -13,9 +14,7 @@ module Sinatra
       end
     end
 
-    public :registered
-
-    [:get, :post, :put, :delete].each do |type|
+    DEFAULT_TYPES.each do |type|
       define_method(type) do |route, &block|
         add_endpoint(type, route, &block)
       end
