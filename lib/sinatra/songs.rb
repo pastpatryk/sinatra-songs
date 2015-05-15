@@ -16,13 +16,13 @@ module Sinatra
     public :registered
 
     [:get, :post, :put, :delete].each do |type|
-      define_method(type) do |route, &action|
-        add_endpoint(type, route, &action)
+      define_method(type) do |route, &block|
+        add_endpoint(type, route, &block)
       end
     end
 
-    def add_endpoint(type, route, &action)
-      @endpoints << {type: type, route: route, action: action}
+    def add_endpoint(type, route, &block)
+      @endpoints << {type: type, route: route, block: block}
     end
 
   end
