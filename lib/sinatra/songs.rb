@@ -3,7 +3,7 @@ require 'sinatra/songs/version'
 module Sinatra
   module Songs
 
-    def self.extended
+    def self.extended(base)
       base.instance_variable_set :@endpoints, []
     end
 
