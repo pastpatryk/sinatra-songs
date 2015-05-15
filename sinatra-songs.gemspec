@@ -21,5 +21,7 @@ Gem::Specification.new do |s|
   s.executables   = all_files.grep(%r{^bin/}) { |f| File.basename(f) }
   s.require_paths = ['lib']
 
-  s.add_runtime_dependency('sinatra', '~> 1.4')
+  s.add_runtime_dependency('sinatra', '>= 1.4')
+
+  s.add_development_dependency('rspec', '>= 3.0')
 end
