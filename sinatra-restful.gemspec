@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
 
   s.summary     = "Simple extension for writing modular RESTful sinatra apps."
-  s.description = "Sinatra::Restful is a simple module that helps you in writing modular RESTful APIs in Sinatra."
+  s.description = "Sinatra::Restful is a simple gem that helps you writing modular RESTful APIs in Sinatra."
 
   s.authors     = ["Patryk Pastewski"]
   s.email       = 'past.patryk@gmail.com'
