@@ -5,7 +5,7 @@ require 'sinatra/restful/version'
 
 Gem::Specification.new do |s|
   s.name        = 'sinatra-restful'
-  s.version     = Sinatra::Restful::Version
+  s.version     = Sinatra::Restful::VERSION
   s.license     = 'MIT'
 
   s.summary     = "Simple extension for writing modular RESTful sinatra apps."
